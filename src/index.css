@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* JourneyGenie Travel App Design System - All colors, gradients, fonts, etc defined here. 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
+    /* Travel-inspired color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 13% 18%;
 
+    /* Travel app specific colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 13% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sunset Orange - Primary travel color */
+    --primary: 15 100% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Ocean Blue - Secondary travel color */
+    --secondary: 183 65% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Light backgrounds for content */
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 13% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Mountain Green - Accent color */
+    --accent: 199 74% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Travel-specific design tokens */
+    --travel-sunset: 15 100% 60%;
+    --travel-ocean: 183 65% 55%;
+    --travel-mountain: 199 74% 57%;
+    --travel-sand: 35 100% 94%;
+    --travel-forest: 158 64% 52%;
+    
+    /* Gradients for travel app */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--travel-sunset)) 0%, hsl(var(--travel-ocean)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-sunset: linear-gradient(90deg, hsl(var(--travel-sunset)) 0%, hsl(25 100% 65%) 100%);
+    
+    /* Shadows for travel cards */
+    --shadow-travel: 0 8px 30px -8px hsl(var(--travel-sunset) / 0.2);
+    --shadow-card: 0 4px 15px -2px hsl(220 13% 18% / 0.1);
+    --shadow-hero: 0 20px 60px -15px hsl(var(--travel-sunset) / 0.3);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -56,26 +79,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Dark mode for travel app */
+    --background: 220 26% 7%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 220 26% 9%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 220 26% 9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Keeping travel colors vibrant in dark mode */
+    --primary: 15 100% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 183 65% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
+    --muted: 220 26% 12%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 199 74% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Updated travel colors for dark mode */
+    --travel-sunset: 15 100% 65%;
+    --travel-ocean: 183 65% 60%;
+    --travel-mountain: 199 74% 62%;
+    
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--travel-sunset)) 0%, hsl(var(--travel-ocean)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 26% 9%) 0%, hsl(220 26% 11%) 100%);
+    --shadow-travel: 0 8px 30px -8px hsl(var(--travel-sunset) / 0.3);
+    --shadow-card: 0 4px 15px -2px hsl(220 26% 4% / 0.3);
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
