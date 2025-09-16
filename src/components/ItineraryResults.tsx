@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { 
   Clock, MapPin, Star, DollarSign, Utensils, Camera, 
   Navigation, Bookmark, Share2, Download, RefreshCw,
-  Sun, Sunset, Moon
+  Sun, Sunset, Moon, ArrowLeft, Settings
 } from "lucide-react";
 
 interface PlanningData {
@@ -183,6 +183,10 @@ const ItineraryResults = ({ planningData, onRegeneratePlan, onBackToPlanning }: 
           
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Button onClick={onBackToPlanning} variant="outline" className="flex items-center space-x-2">
+              <Settings className="w-4 h-4" />
+              <span>Back to Discovery</span>
+            </Button>
             <Button onClick={onRegeneratePlan} variant="outline" className="flex items-center space-x-2">
               <RefreshCw className="w-4 h-4" />
               <span>Regenerate Plan</span>
@@ -320,10 +324,11 @@ const ItineraryResults = ({ planningData, onRegeneratePlan, onBackToPlanning }: 
           </div>
         )}
 
-        {/* Back Button */}
-        <div className="text-center mt-12">
-          <Button onClick={onBackToPlanning} variant="outline" size="lg">
-            Plan Another Trip
+        {/* Navigation Buttons */}
+        <div className="flex justify-center items-center space-x-4 mt-12">
+          <Button onClick={onBackToPlanning} variant="outline" size="lg" className="flex items-center space-x-2">
+            <ArrowLeft className="w-4 h-4" />
+            <span>Modify Selections</span>
           </Button>
         </div>
       </div>
